@@ -2,8 +2,6 @@
 
 set -euxo pipefail
 
-FX_PASSWORD="uw4xfPqE96*rfd"
-
 ARCHIVE_PATH="all.tar.xz"
 
 curl --proto '=https' --tlsv1.2 -sSf \
