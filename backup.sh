@@ -4,7 +4,7 @@ set -euxo pipefail
 
 ARCHIVE_PATH="all.tar.xz"
 
-curl --proto '=https' --tlsv1.2 -sSf \
+curl --proto "=https" --tlsv1.2 -sSf \
   -H "Authorization: Bearer $FX_PASSWORD" \
   https://fx.huijzer.xyz/api/download/all.tar.xz > "$ARCHIVE_PATH"
 
