@@ -1,0 +1,27 @@
+name: ci
+on:
+  schedule:
+    - cron: '24 0,6,12,18 * * *'
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+jobs:
+  backup:
+    permissions:
+      contents: write
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: ./backup.sh
+        env:
+          FX_PASSWORD: ${{ secrets.FX_PASSWORD }}
+      - if: github.event_name != 'pull_request'
+        run: |
+          git config --global user.email "github@huijzer.xyz"
+          git config --global user.name "Rik Huijzer"
+
+          git add .
+          git commit -m '[bot] backup'
+          git push
