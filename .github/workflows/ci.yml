@@ -12,6 +12,7 @@ jobs:
     permissions:
       contents: write
     runs-on: ubuntu-24.04
+    concurrency: backup
     steps:
       - uses: actions/checkout@v4
       - run: ./backup.sh
