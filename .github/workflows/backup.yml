@@ -2,6 +2,9 @@ name: backup
 on:
   schedule:
     - cron: '24 0,6,12,18 * * *'
+  push:
+    branches:
+      - main
   pull_request:
   workflow_dispatch:
 jobs:
