@@ -20,7 +20,7 @@ jobs:
         # clone probably not.
       - run: >
           git clone --depth=1
-          https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
           .
       - run: ./backup.sh download
         env:
