@@ -4,6 +4,10 @@ set -euxo pipefail
 
 ARCHIVE_PATH="all.tar.xz"
 
+cleanup() {
+  rm -rf files/ posts/ settings/
+}
+
 download() {
   curl --proto "=https" --tlsv1.2 -sSf \
     -H "Authorization: Bearer $FX_PASSWORD" \
@@ -24,10 +28,10 @@ commit() {
   fi
 }
 
-if [[ "$1" == "download" ]]; then
-  echo "Running download..."
+if [[ "$1" == "cleanup" ]]; then
+  cleanup
+elif [[ "$1" == "download" ]]; then
   download
 elif [[ "$1" == "commit" ]]; then
-  echo "Running commit..."
   commit
 fi
