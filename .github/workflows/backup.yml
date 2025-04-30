@@ -1,5 +1,6 @@
 name: backup
-concurrency: backup
+concurrency:
+  group: backup
 on:
   schedule:
     - cron: '24 0,6,12,18 * * *'
