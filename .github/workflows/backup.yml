@@ -1,4 +1,5 @@
 name: backup
+concurrency: backup
 on:
   schedule:
     - cron: '24 0,6,12,18 * * *'
@@ -12,7 +13,6 @@ jobs:
     permissions:
       contents: write
     runs-on: ubuntu-24.04
-    concurrency: backup
     steps:
       - uses: actions/checkout@v4
       - run: ./backup.sh
