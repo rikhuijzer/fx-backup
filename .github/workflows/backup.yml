@@ -15,19 +15,17 @@ jobs:
       contents: write
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+        # Checkout seems to occur concurrently even when concurrency group is
+        # set https://github.com/actions/checkout/discussions/1125.
+      - run: |
+          git clone --depth=1 \
+            https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git \
+            .
       - run: ./backup.sh
         env:
           FX_PASSWORD: ${{ secrets.FX_PASSWORD }}
       - if: github.event_name != 'pull_request'
         run: |
-          # Checkout seems to occur concurrently even when concurrency group is
-          # set https://github.com/actions/checkout/discussions/1125.
-          git clone --depth=1 \
-            https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git \
-            repo
-          cd repo
-
           if [ -n "$(git status --porcelain)" ]; then
             git config --global user.email "$GITHUB_ACTOR@users.noreply.github.com"
             git config --global user.name "$GITHUB_ACTOR"
