@@ -1,14 +1,12 @@
 #!/usr/bin/env bash
-
 set -euxo pipefail
-
-ARCHIVE_PATH="all.tar.xz"
 
 cleanup() {
   rm -rf files/ posts/ settings/
 }
 
 download() {
+  ARCHIVE_PATH="all.tar.xz"
   curl --proto "=https" --tlsv1.2 -sSf \
     -H "Authorization: Bearer $FX_PASSWORD" \
     https://fx.huijzer.xyz/api/download/all.tar.xz > "$ARCHIVE_PATH"
