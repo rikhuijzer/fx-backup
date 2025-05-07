@@ -1,3 +1,5 @@
 site_name = "Rik's Weblog"
 author_name = "Rik Huijzer"
-about = "Building open source software"
+about = """
+Building open source software. Contact: [email](mailto:huijzer.xyzcontact.stylishly377@passmail.net).
+"""
