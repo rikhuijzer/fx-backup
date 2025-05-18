@@ -3,3 +3,36 @@ author_name = "Rik Huijzer"
 about = """
 Building open source software. Contact: [email](mailto:huijzer.xyzcontact.stylishly377@passmail.net).
 """
+blogroll_feeds = """
+
+http://brklyninvestor.com/atom/
+http://feeds.feedburner.com/collabfund
+https://aukehoekstra.substack.com/feed
+https://blog.pragmaticengineer.com/feed/
+https://blog.sunfishcode.online/atom.xml
+https://bytecodealliance.org/feed.xml
+https://calnewport.com/blog/feed
+https://economistwritingeveryday.com/feed
+https://feeds.feedburner.com/mrmoneymustache
+https://gemenergyanalytics.substack.com/feed
+https://gendignoux.com/blog/feed.xml
+https://hachyderm.io/@sunfish.rss
+https://kerkour.com/feed.xml
+https://kjlabuz.substack.com/feed
+https://lucumr.pocoo.org/feed.atom
+https://maartensteinbuch.com/feed
+https://nickb.dev/archive/feed
+https://ourworldindata.org/atom.xml
+https://rss.beehiiv.com/feeds/IP6TE2kgRb.xml
+https://rustacean-station.org/podcast.rss
+https://ryanmcbeth.substack.com/feed
+https://simonwillison.net/atom/everything/
+https://stratechery.com/feed
+https://susam.net/feed.xml
+https://www.bitsaboutmoney.com/archive/rss/
+https://www.businesskorea.co.kr/rss/clickTop.xml
+https://www.claret.ca/feed/
+https://www.energiepodium.nl/feed
+https://www.noahpinion.blog/feed
+https://www.pv-magazine.com/feed
+https://www.sustainabilitybynumbers.com/feed"""
