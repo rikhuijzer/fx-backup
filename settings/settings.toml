@@ -1,7 +1,7 @@
 site_name = "Rik's Weblog"
 author_name = "Rik Huijzer"
 about = """
-Building open source software and writing about history and contemporary events. Contact: [email](mailto:huijzer.xyzcontact.stylishly377@passmail.net).
+Building open source software, and writing about history and contemporary events. Contact: [email](mailto:huijzer.xyzcontact.stylishly377@passmail.net).
 """
 blogroll_feeds = """
 http://brklyninvestor.com/atom/
