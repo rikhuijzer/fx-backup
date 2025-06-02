@@ -2,6 +2,7 @@ site_name = "Rik's Weblog"
 author_name = "Rik Huijzer"
 about = """
 Blog posts about open source software, statistics, history, and related topics.
+[About me](https://huijzer.xyz/posts/92).
 Contact: [email](mailto:huijzer.xyzcontact.stylishly377@passmail.net).
 """
 blogroll_feeds = """
